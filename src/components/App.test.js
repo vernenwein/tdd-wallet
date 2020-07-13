@@ -12,4 +12,14 @@ describe("App", () => {
   it("contains a connected wallet component", () => {
     expect(app.find("Connect(Wallet)").exists()).toBe(true);
   });
+
+  it("contains a connected Loot component", () => {
+    expect(app.find("Connect(Loot)").exists()).toBe(true);
+  });
+
+  it("contains a link to coindesk", () => {
+    expect(app.find("a").props().href).toBe(
+      "https://www.coindesk.com/price/bitcoin"
+    );
+  });
 });
